@@ -9,7 +9,9 @@
     <font face="Arial">
     <h1>A Completed Guide to Flexbox in CSS (Phần 1)</h1>
     <p>Hôm nay mình sẽ giới thiệu với các bạn những tính năng cần biết trong Flexbox của CSS. Vì Flexbox có khá nhiều tính năng hay ho nên mình sẽ tách ra ít nhất là 2 phần để có thể giới thiệu một cách đầy đủ !</p>
+    
     <h2>I, Một vài thuật ngữ</h2>
+    <div>
     <p>Bởi vì Flexbox là cả một module trong CSS chứ không phải chỉ là một thuộc tính, do đó nó có chứa hàng tá các thuật ngữ riêng, ta hãy tìm hiểu qua một chút trước khi đi vào các tính năng của Flexbox nhé.</p>
     <p>Nếu như với layout bình thường của CSS, việc hiển thị của các elements sẽ được dựa trên block và inline flow directions, thì trong flex layout chúng ta sử dụng "flex-flow directions". Các bạn hãy quan sát ảnh dưới:</p>
     <img src="https://images.viblo.asia/cbfd1fde-582c-4d2c-b2ed-56a44b1e4994.png" width="645" alt="anh minh hoa">
@@ -27,30 +29,36 @@
         <li><b>cross-start | cross-end </b>- Đây là 2 điểm bắt đầu và kết thúc của trục cross.</li>
         <li><b>cross size </b>- Kích thước (chiều rộng hoặc dọc) của mỗi item dựa theo trục cross.</li>
     </ul>
+    </div>
 
     <h2>II, Các thuộc tính dành cho flex container</h2>
     
     <h3>1, display</h3>
+    <div>
     <p>Đây đơn giản là thuộc tính display trong CSS thôi. Cũng như Block, Inline hay Inline-block, ta tạo ra một flex container bằng cách thiết lập cho 1 element thuộc tính này có giá trị như sau:</p>
     <div><p>.container {
         display: flex; /* or inline-flex */
     }</p></div>
-    
+    </div>
+
     <h3>2, flex-direction</h3>
+    <div>
     <img src="https://images.viblo.asia/4129cabc-a5c7-4e14-ae31-8216e6ef6916.png" width="645" alt="">
     <p>Đây chính là thuộc tính sẽ giúp điều chỉnh hướng của main-axis (cũng chính là hướng mà các item sẽ hiển thị). Flexbox là một single-direction layout concept, vậy nên các item sẽ chỉ được hiển thị theo 1 trong 2 kiểu đó là ngang hoặc dọc.</p>
     
     <p>.container {
         flex-direction: row | row-reverse | column | column-reverse;
     }</p>
-    <ul type="square">
+    <ul>
         <li>row (kiểu mặc định): Các item được sắp xếp theo chiều ngang, từ trái sang phải.</li>
         <li>row-reverse : Các item được sắp xếp theo chiều ngang, từ phải sang trái.</li>
         <li>column : Các item được sắp xếp theo chiều dọc, từ trên xuống dưới.</li>
         <li>column-reverse : Các item được sắp xếp theo chiều dọc, từ dưới lên trên.</li>
     </ul>
+    </div>
 
     <h3>3, flex-wrap</h3>
+    <div>
     <img src=https://images.viblo.asia/e1464e5c-18b6-4c76-8da0-399a69aa4590.png width="645" alt="">
     <p>Mặc định thì các flex item sẽ luôn nằm trên 1 dòng, ta có thể thay đổi điều này dựa trên thuộc tính flex-wrap.</p>
     <p>.container{
@@ -61,8 +69,10 @@
         <li>wrap: Các flex item sẽ nằm trên nhiều dòng, từ trên xuống dưới</li>
         <li>wrap-reverse: Các flex item sẽ nằm trên nhiều dòng, từ dưới lên trên</li>
     </ul>
+    </div>
 
     <h3>4, justify-content</h3>
+    <div>
     <img src=https://images.viblo.asia/26b70b28-1b8c-4ea1-b2b5-49e549566070.png width="645" alt="">
     <p>Đây là cách mà các item sắp xếp cách hiển thị trong container.</p>
     <p>.container {
@@ -77,9 +87,10 @@
         <li>space-around: Tương tự như space-between tuy nhiên item đầu tiên và cuối cùng "cách lề" một khoảng bằng nửa khoảng cách giữa các item</li>
         <li>space-evenly: Tương tự như space-around tuy nhiên item đầu tiên và cuối cùng "cách lề" một khoảng bằng khoảng cách giữa các item</li>
     </ul>
-    
+    </div>
 
     <h3>5, align-items</h3>
+    <div>
     <center>
     <img src=https://images.viblo.asia/793009f7-e87b-4ec9-9bb7-7523229a89dd.png width="500" alt="">
     </center>
@@ -95,9 +106,10 @@
         <li>center: Các item nằm giữa container</li>
         <li>baseline: Các item được sắp xếp theo baseline của chúng.</li>
     </ul>
-    
+    </div>
 
     <h3>6, align-content</h3>
+    <div>
     <center>
     <img src=https://images.viblo.asia/51a0934c-0204-4892-a771-1040ebe64838.png width="500" alt="">
     </center>
@@ -114,7 +126,7 @@
         <li>space-around: Như trên</li>
         <li>stretch (default): Các dòng được kéo giãn để fill đầy các khoảng trống</li>
     </ul>
-
+    </div>
 
     <h2>III, Tạm kết</h2>
     <p>Trong bài này ta đã đi qua được các thuộc tính cần thiết dành cho flex container, bài sau chúng ta sẽ cùng tìm hiểu về các thuộc tính dành cho flex item nhé !</p>
